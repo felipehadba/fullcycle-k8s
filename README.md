@@ -55,7 +55,7 @@ kind --version
 To create a new Kubernetes cluster named `fullcycle`:
 
 ```sh
-kind create cluster --name fullcycle
+kind create cluster --name fullcycle --config config.yaml
 ```
 
 This will start a local Kubernetes cluster using Docker containers.
