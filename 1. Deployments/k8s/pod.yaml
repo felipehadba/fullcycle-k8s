@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: goserver
+  namespace: default
+spec:
+  containers:
+    - name: goserver
+      image: fc-goserver:1.0
