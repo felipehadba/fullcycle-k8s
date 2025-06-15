@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goserver
+  labels:
+    app: goserver
+spec:
+  selector:
+    matchLabels:
+      app: goserver
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: goserver
+    spec:
+      containers:
+        - name: goserver
+          image: fc-goserver:2.0
+          env:
+            - name: USER
+              value: "JohnDoe"
+            - name: PASSWORD
+              value: "password123"
+            - name: NAME
+              value: "John Doe"
+            - name: AGE
+              value: "30"
